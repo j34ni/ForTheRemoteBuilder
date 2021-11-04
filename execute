@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ulimit -s unlimited
+
+cd /opt/esm/work/$CASENAME/run && /opt/esm/work/$CASENAME/bld/noresm.exe
