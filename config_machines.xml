@@ -2,7 +2,8 @@
 <config_machines>
   <machine MACH="container">
     <DESC>
-          Ubuntu 20.04 with OPENMPI-4.1.0
+          GNU Fortran-10.3.0
+          OpenMPI4.1.1
     </DESC>
     <NODENAME_REGEX>UNSET</NODENAME_REGEX>
     <OS>LINUX</OS>
@@ -27,7 +28,7 @@
       <executable></executable>
     </mpirun>
     <mpirun mpilib="default">
-      <executable>mpirun</executable>
+      <executable> nohup mpirun </executable>
       <arguments>
         <arg name="anum_tasks"> -np $TOTALPES </arg>
       </arguments>      
