@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <config_compilers version="2.0">
-  <compiler COMPILER="gnu" MACH="container">
-    <NETCDF_PATH>/usr/local/netcdf</NETCDF_PATH>
-    <PNETCDF_PATH>/usr/local/pnetcdf</PNETCDF_PATH>
+  <compiler COMPILER="gnu" MACH="espresso">
+    <NETCDF_PATH>/opt/esm/anaconda</NETCDF_PATH>
+    <LD>mpifort</LD>
     <FFLAGS>
       <append DEBUG="FALSE"> -O2 -mcmodel=small -fallow-argument-mismatch -fallow-invalid-boz </append>
       <append DEBUG="TRUE"> -mcmodel=small -fallow-argument-mismatch -fallow-invalid-boz </append>
@@ -15,9 +15,7 @@
     </CFLAGS>
     <PIO_FILESYSTEM_HINTS> lustre </PIO_FILESYSTEM_HINTS>
     <SLIBS>
-      <append> -L/usr/local/netcdf/lib -lnetcdff -lnetcdf </append>
-      <append> -L/usr/local/pnetcdf/lib -lpnetcdf </append>
-      <append> -L/usr/local/openblas/lib -lopenblas </append>
+      <append> -L/opt/esm/anaconda/lib -lnetcdff -lnetcdf -lopenblas </append>
     </SLIBS>
   </compiler>
 </config_compilers>
