@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/opt/esm/$MODEL/cime/scripts/Tools/getTiming --caseroot /opt/esm/archive/cases/$CASENAME

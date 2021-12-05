@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /opt/esm/anaconda/etc/profile.d/conda.sh && conda activate
+
+ulimit -s unlimited
+
+cd /opt/esm/work/$CASENAME/run && /opt/esm/work/$CASENAME/bld/cesm.exe
