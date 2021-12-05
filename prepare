@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. /opt/esm/anaconda/etc/profile.d/conda.sh && conda activate
+
 echo $CASENAME
 
 mkdir -p $HOME/.cime
@@ -9,7 +11,7 @@ sed -i -e "s/TASKS_PER_NODE>128/TASKS_PER_NODE>$SLURM_NTASKS_PER_NODE/g" $HOME/.
 cp /opt/esm/config_pes.xml /opt/esm/archive/auto_config_pes.xml
 sed -i -e "s/-1/-$SLURM_JOB_NUM_NODES/g" /opt/esm/archive/auto_config_pes.xml
 
-cd /opt/esm/my_sandbox/cime/scripts
+cd /opt/esm/$MODEL/cime/scripts
 ./create_newcase --case /opt/esm/archive/cases/$CASENAME --compset $COMPSET --res $RES --machine $MACHINE --run-unsupported --handle-preexisting-dirs r --pesfile /opt/esm/archive/auto_config_pes.xml
 
 cd /opt/esm/archive/cases/$CASENAME
