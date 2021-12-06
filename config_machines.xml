@@ -3,13 +3,13 @@
   <machine MACH="espresso">
     <DESC>
           GCC 11.2.0
-          OpenMPI 4.1.2
+          MPIch 3.4.2 or OpenMPI 4.1.2
     </DESC>
     <NODENAME_REGEX>UNSET</NODENAME_REGEX>
     <OS>LINUX</OS>
     <PROXY>UNSET</PROXY>
     <COMPILERS>gnu</COMPILERS>
-    <MPILIBS>openmpi,mpi-serial</MPILIBS>
+    <MPILIBS>openmpi,mpich,mpi-serial</MPILIBS>
     <SAVE_TIMING_DIR>UNSET</SAVE_TIMING_DIR>
     <CIME_OUTPUT_ROOT>/opt/esm/work</CIME_OUTPUT_ROOT>
     <DIN_LOC_ROOT>/opt/esm/inputdata</DIN_LOC_ROOT>
