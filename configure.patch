@@ -1,0 +1,11 @@
+--- ./libraries/mct/configure   2022-01-03 13:09:34.000000000 +0000
++++ ./libraries/mct/configure_patched   2022-01-03 13:50:17.564819867 +0000
+@@ -5571,6 +5571,8 @@
+ # ARCHIVE COMMAND SIMILAR ACROSS ALL PLATFORMS
+ if test -z "$AR"; then
+    AR="ar cq"
++else
++   AR="$AR cq"
+ fi
+
+ # RANLIB

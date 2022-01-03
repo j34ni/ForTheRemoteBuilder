@@ -29,5 +29,3 @@ mkdir -p /opt/esm/work/$CASENAME/run/timing/checkpoints
 
 ./check_input_data --download
 ./check_case
-
-cp /opt/esm/work/$CASENAME/bld/cesm.exe /opt/esm/work/$CASENAME/bld/noresm.exe

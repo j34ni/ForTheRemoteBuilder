@@ -2,8 +2,8 @@
 <config_machines>
   <machine MACH="espresso">
     <DESC>
-          GCC 11.2.0
-          MPIch 3.4.2 or OpenMPI 4.1.2
+          GCC 
+          MPIch or OpenMPI 
     </DESC>
     <NODENAME_REGEX>UNSET</NODENAME_REGEX>
     <OS>LINUX</OS>
