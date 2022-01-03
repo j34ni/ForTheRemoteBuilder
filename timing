@@ -1,3 +1,5 @@
 #!/bin/bash
 
+. /opt/esm/anaconda/etc/profile.d/conda.sh && conda activate
+
 /opt/esm/$MODEL/cime/scripts/Tools/getTiming --caseroot /opt/esm/archive/cases/$CASENAME
