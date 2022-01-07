@@ -2,6 +2,7 @@
 <config_compilers version="2.0">
   <compiler COMPILER="gnu" MACH="espresso">
     <NETCDF_PATH>/opt/esm/anaconda</NETCDF_PATH>
+    <PNETCDF_PATH>/opt/esm/anaconda</PNETCDF_PATH>
     <LD>mpifort</LD>
     <FFLAGS>
       <append DEBUG="FALSE"> -O2 -mcmodel=small -fallow-argument-mismatch -fallow-invalid-boz </append>
@@ -15,7 +16,7 @@
     </CFLAGS>
     <PIO_FILESYSTEM_HINTS> lustre </PIO_FILESYSTEM_HINTS>
     <SLIBS>
-      <append> -L/opt/esm/anaconda/lib -lnetcdff -lnetcdf -lopenblas </append>
+      <append> -L/opt/esm/anaconda/lib -lnetcdff -lnetcdf -lpnetcdf -lopenblas </append>
     </SLIBS>
   </compiler>
 </config_compilers>
